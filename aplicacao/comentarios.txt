@@ -1,0 +1,31 @@
+
+usar hash map para diminuir tamanho de comparacoes em vez de usar if
+para todas as comparacoes de valor do usuario com tabela IMC
+https://stackoverflow.com/questions/6841379/is-there-java-hashmap-equivalent-in-php
+
+erros comuns
+https://stackoverflow.com/questions/4261133/notice-undefined-variable-notice-undefined-index-warning-undefined-arr
+
+cuidado com loose comparisons do php 
+https://www.php.net/manual/en/types.comparisons.php#types.comparisions-loose
+
+tentar usar switch case com strict comparisons
+https://stackoverflow.com/questions/3525614/make-switch-use-comparison-not-comparison-in-php
+LOOSE
+$var = 0;
+switch($var) {
+    case NULL : return 'a'; break;
+    default : return 'b'; break;
+}
+STRICT
+switch(true) {
+    case $var === null:
+        return 'a';
+    default:
+        return 'b';
+}
+
+evitar aninhamento
+https://www.geeksforgeeks.org/nested-switch-case/
+https://stackoverflow.com/questions/15931089/alternative-to-nested-switch-statements-in-java
+
