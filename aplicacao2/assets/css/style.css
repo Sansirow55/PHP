@@ -1,0 +1,15 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    
+}
+
+header{
+display: flex;
+background-color: cornflowerblue;
+height:40px;
+}
+
