@@ -4,7 +4,6 @@ class Usuario
 {
     private string $nome;
     private DateTimeInterface $dataNascimento;
-    //private DateTime $dataNascimento;
     private float $peso;
     private float $altura;
     private SexoEnum $sexo;

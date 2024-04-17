@@ -1,0 +1,34 @@
+switch(true){
+    case $_SERVER['REQUEST_METHOD'] === 'POST': //quando usuario clica calcular
+        switch(empty($nome)|| empty($peso) || empty($altura) || empty($sexo) || empty($dataNascimento)){
+        //compara se valores foram preenchidos corretamente
+        case true:
+            $nome = $_POST['nome'];
+            $peso = $_POST['peso'];
+            $altura = $_POST['altura'];
+            $sexo = $_POST['sexo'];
+           // $dataNascimento = $_POST['dataNascimento']; //Undefined array key?
+            break;
+            default:
+            $template = file_get_contents(__DIR__ . '/src/templates/resultado.html');
+
+        $template = str_replace(
+            [
+                '{{USUARIO}}',
+                '{{PESO}}',
+                '{{ALTURA}}',
+                '{{IDADE}}',
+                '{{SEXO}}',
+                '{{ICM}}',
+                '{{CLASSIFICACAO}}',
+                'Algum campo acima não foi preenchido corretamente'
+            ],
+            $template
+        );
+
+
+        echo $template;
+        exit;
+    }
+    break;
+} 

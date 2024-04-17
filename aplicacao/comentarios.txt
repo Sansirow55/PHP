@@ -1,3 +1,28 @@
+php -S localhost:8000
+// O IMC é calculado dividindo o peso (em kg) pela altura ao quadrado (em m), 
+// de acordo com a seguinte fórmula: IMC = peso / (altura x altura).
+
+/**
+    IMC	Classificação
+    Menor que 18,5	Magreza
+    18,5 a 24,9	Normal
+    25 a 29,9	Sobrepeso
+    30 a 34,9	Obesidade grau I
+    35 a 39,9	Obesidade grau II
+    Maior que 40	Obesidade grau III
+ */
+
+https://www.php.net/manual/en/language.oop5.decon.php
+
+ https://www.php.net/manual/pt_BR/class.exception.php
+ https://gist.github.com/mlocati/249f07b074a0de339d4d1ca980848e6a
+ https://3v4l.org/sDMsv
+
+ Exceptions
+ https://stackoverflow.com/questions/18679090/when-to-catch-the-exception-vs-when-to-throw-the-exceptions
+
+Exception vs error
+https://stackoverflow.com/questions/841500/php-exceptions-vs-errors
 
 usar hash map para diminuir tamanho de comparacoes em vez de usar if
 para todas as comparacoes de valor do usuario com tabela IMC
@@ -28,4 +53,39 @@ switch(true) {
 evitar aninhamento
 https://www.geeksforgeeks.org/nested-switch-case/
 https://stackoverflow.com/questions/15931089/alternative-to-nested-switch-statements-in-java
+https://stackoverflow.com/questions/323022/static-class-vs-class-with-private-constructor-and-all-static-properties-and-me
+https://dotnethow.net/static-vs-non-static-classes-in-c-understanding-the-differences-and-use-cases/#:~:text=Non%2Dstatic%20classes%2C%20also%20known,and%20contain%20only%20static%20members.
+public static class MathHelper 
+###########CLASSE BASICA############
+Classe
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age() {
+    const date = new Date();
+    return date.getFullYear() - this.year;
+  }
+}
 
+const myCar = new Car("Ford", 2014);
+document.getElementById("demo").innerHTML =
+"My car is " + myCar.age() + " years old.";
+##########################################
+
+###############EXEMPLO###################
+{
+    public static int Add(int a, int b) 
+    {
+        return a + b;
+    }
+}
+MathHelper class is a static class that contains a single static method, Add. Because it is a static class, you cannot create an instance of it using the “new” keyword. Instead, you can access its static members directly by using the class name:
+
+int result = MathHelper.Add(2, 3); // Output: 5
+One of the advantages of using a static class is that it can be accessed without creating an instance of the class, which can save resources and improve performance.
+###########################################
+
+scopes
+https://stackoverflow.com/questions/407048/accessing-variables-from-other-functions-without-using-global-variables
